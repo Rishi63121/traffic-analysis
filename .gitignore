@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Env files
+.env
+
+# ML models (optional but recommended)
+*.pkl
+*.pt
+*.h5
+
+# OS junk
+.DS_Store
+Thumbs.db
