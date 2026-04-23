@@ -37,6 +37,14 @@ TrafficPulse is a full-stack web application designed to analyze and predict tra
 - **Models**: Two separate models for volume and congestion prediction
 - **Features**: Encoded categorical variables (area, road, weather), temporal features (day of week, month), and incident data
 
+## Model Setup
+
+Trained model files (.pkl) are not included due to size constraints.
+
+To generate them, run:
+```bash
+python train.py
+
 ## Project Structure
 
 ```
