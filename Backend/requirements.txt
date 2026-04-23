@@ -1,0 +1,9 @@
+# backend/requirements.txt
+# Install all of these with: pip install -r requirements.txt
+
+flask          # the web framework
+flask-cors     # lets React call Flask from a different port
+scikit-learn   # machine learning library
+pandas         # data manipulation (DataFrames)
+numpy          # numbers and arrays
+joblib         # saving/loading ML models

@@ -1,0 +1,129 @@
+/* frontend/src/style.css */
+/* ─────────────────────────────────────────────────────────────
+   Global styles. No Tailwind — just plain CSS with variables.
+   CSS variables (--var-name) let us reuse colors everywhere.
+   ───────────────────────────────────────────────────────────── */
+
+/* ── Color tokens ─────────────────────────────────────────── */
+:root {
+  --bg:           #0d1117;   /* page background — deep dark */
+  --surface:      #161b27;   /* card background */
+  --border:       #21293a;   /* card/input borders */
+  --text:         #e2e8f0;   /* main text */
+  --text-muted:   #64748b;   /* secondary text */
+  --cyan:         #22d3ee;   /* primary accent */
+  --green:        #4ade80;   /* positive / low */
+  --amber:        #fbbf24;   /* warning / medium */
+  --red:          #f87171;   /* danger / high */
+  --purple:       #a78bfa;   /* secondary accent */
+  --radius:       12px;
+}
+
+/* ── Reset & base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ───────────────────────────────────────────────── */
+.app          { display: flex; min-height: 100vh; }
+.sidebar      { width: 230px; background: var(--surface); border-right: 1px solid var(--border);
+                display: flex; flex-direction: column; padding: 28px 16px; gap: 4px; flex-shrink: 0; }
+.main         { flex: 1; padding: 32px; overflow-y: auto; }
+.page-title   { font-family: "Syne", sans-serif; font-size: 26px; font-weight: 800;
+                margin-bottom: 6px; }
+.page-subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 28px; }
+
+/* ── Card ─────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.card-title { font-size: 13px; font-weight: 600; text-transform: uppercase;
+              letter-spacing: .06em; color: var(--text-muted); margin-bottom: 14px; }
+
+/* ── Stat cards row ───────────────────────────────────────── */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+              gap: 14px; margin-bottom: 24px; }
+.stat-card  { background: var(--surface); border: 1px solid var(--border);
+              border-radius: var(--radius); padding: 20px; }
+.stat-label { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+.stat-value { font-family: "Syne", sans-serif; font-size: 28px; font-weight: 700; line-height: 1; }
+
+/* ── Sidebar nav ──────────────────────────────────────────── */
+.brand {
+  font-family: "Syne", sans-serif; font-size: 17px; font-weight: 800;
+  color: var(--cyan); padding: 4px 12px 20px; border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  color: var(--text-muted); font-size: 14px; font-weight: 500;
+  border: none; background: none; width: 100%; text-align: left;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-item:hover           { background: rgba(255,255,255,.05); color: var(--text); }
+.nav-item.active          { background: rgba(34,211,238,.1); color: var(--cyan); }
+
+/* ── Congestion badge ─────────────────────────────────────── */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px;
+         font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.badge.low      { background: rgba(74,222,128,.15);  color: var(--green); }
+.badge.moderate { background: rgba(251,191,36,.15);  color: var(--amber); }
+.badge.high     { background: rgba(248,113,113,.15); color: var(--red);   }
+.badge.critical { background: rgba(248,113,113,.25); color: var(--red);   }
+
+/* ── Form elements ────────────────────────────────────────── */
+.form-group       { margin-bottom: 18px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase;
+                    letter-spacing: .05em; color: var(--text-muted); margin-bottom: 6px; }
+select, input[type="number"] {
+  width: 100%; padding: 9px 12px; background: var(--bg);
+  border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); font-size: 14px;
+  transition: border-color 0.15s;
+}
+select:focus, input[type="number"]:focus { outline: none; border-color: var(--cyan); }
+input[type="range"] { width: 100%; accent-color: var(--cyan); cursor: pointer; }
+
+/* ── Button ───────────────────────────────────────────────── */
+.btn {
+  padding: 11px 22px; background: rgba(34,211,238,.1);
+  border: 1px solid rgba(34,211,238,.35); border-radius: 8px;
+  color: var(--cyan); font-size: 14px; font-weight: 600;
+  cursor: pointer; transition: background 0.15s, transform 0.1s;
+}
+.btn:hover    { background: rgba(34,211,238,.18); }
+.btn:active   { transform: scale(0.98); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn.full     { width: 100%; margin-top: 8px; }
+
+/* ── Result box ───────────────────────────────────────────── */
+.result-box {
+  background: rgba(34,211,238,.05); border: 1px solid rgba(34,211,238,.2);
+  border-radius: var(--radius); padding: 22px; margin-top: 20px;
+  animation: fadeIn .3s ease;
+}
+.result-volume { font-family: "Syne", sans-serif; font-size: 42px; font-weight: 800;
+                 color: var(--cyan); line-height: 1; margin-bottom: 8px; }
+
+/* ── Grid helpers ─────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+
+/* ── Misc ─────────────────────────────────────────────────── */
+.divider    { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+.muted      { color: var(--text-muted); font-size: 13px; }
+.chart-wrap { height: 260px; margin-top: 10px; }
+.spacer     { margin-bottom: 20px; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }

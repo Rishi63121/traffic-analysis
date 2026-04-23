@@ -1,0 +1,146 @@
+{
+  "areas": [
+    "Electronic City",
+    "Hebbal",
+    "Indiranagar",
+    "Jayanagar",
+    "Koramangala",
+    "M.G. Road",
+    "Whitefield",
+    "Yeshwanthpur"
+  ],
+  "roads": [
+    "100 Feet Road",
+    "Anil Kumble Circle",
+    "Ballari Road",
+    "CMH Road",
+    "Hebbal Flyover",
+    "Hosur Road",
+    "ITPL Main Road",
+    "Jayanagar 4th Block",
+    "Marathahalli Bridge",
+    "Sarjapur Road",
+    "Silk Board Junction",
+    "Sony World Junction",
+    "South End Circle",
+    "Trinity Circle",
+    "Tumkur Road",
+    "Yeshwanthpur Circle"
+  ],
+  "weathers": [
+    "Clear",
+    "Fog",
+    "Overcast",
+    "Rain",
+    "Windy"
+  ],
+  "road_to_area": {
+    "100 Feet Road": "Indiranagar",
+    "Anil Kumble Circle": "M.G. Road",
+    "Ballari Road": "Hebbal",
+    "CMH Road": "Indiranagar",
+    "Hebbal Flyover": "Hebbal",
+    "Hosur Road": "Electronic City",
+    "ITPL Main Road": "Whitefield",
+    "Jayanagar 4th Block": "Jayanagar",
+    "Marathahalli Bridge": "Whitefield",
+    "Sarjapur Road": "Koramangala",
+    "Silk Board Junction": "Electronic City",
+    "Sony World Junction": "Koramangala",
+    "South End Circle": "Jayanagar",
+    "Trinity Circle": "M.G. Road",
+    "Tumkur Road": "Yeshwanthpur",
+    "Yeshwanthpur Circle": "Yeshwanthpur"
+  },
+  "road_stats": {
+    "100 Feet Road": {
+      "avg_volume": 31956.9,
+      "avg_congestion": 87.1,
+      "avg_speed": 38.4
+    },
+    "Anil Kumble Circle": {
+      "avg_volume": 35251.8,
+      "avg_congestion": 90.8,
+      "avg_speed": 37.4
+    },
+    "Ballari Road": {
+      "avg_volume": 26272.6,
+      "avg_congestion": 79.5,
+      "avg_speed": 40.0
+    },
+    "CMH Road": {
+      "avg_volume": 32611.9,
+      "avg_congestion": 88.2,
+      "avg_speed": 38.9
+    },
+    "Hebbal Flyover": {
+      "avg_volume": 26794.9,
+      "avg_congestion": 80.7,
+      "avg_speed": 40.3
+    },
+    "Hosur Road": {
+      "avg_volume": 16557.2,
+      "avg_congestion": 55.2,
+      "avg_speed": 44.0
+    },
+    "ITPL Main Road": {
+      "avg_volume": 21866.0,
+      "avg_congestion": 71.1,
+      "avg_speed": 42.0
+    },
+    "Jayanagar 4th Block": {
+      "avg_volume": 24496.2,
+      "avg_congestion": 76.7,
+      "avg_speed": 40.1
+    },
+    "Marathahalli Bridge": {
+      "avg_volume": 20773.0,
+      "avg_congestion": 67.2,
+      "avg_speed": 42.3
+    },
+    "Sarjapur Road": {
+      "avg_volume": 40190.0,
+      "avg_congestion": 93.8,
+      "avg_speed": 36.1
+    },
+    "Silk Board Junction": {
+      "avg_volume": 16134.5,
+      "avg_congestion": 53.7,
+      "avg_speed": 43.3
+    },
+    "Sony World Junction": {
+      "avg_volume": 41470.8,
+      "avg_congestion": 94.1,
+      "avg_speed": 36.0
+    },
+    "South End Circle": {
+      "avg_volume": 24704.1,
+      "avg_congestion": 77.3,
+      "avg_speed": 39.4
+    },
+    "Trinity Circle": {
+      "avg_volume": 35350.1,
+      "avg_congestion": 90.4,
+      "avg_speed": 37.7
+    },
+    "Tumkur Road": {
+      "avg_volume": 18574.5,
+      "avg_congestion": 60.9,
+      "avg_speed": 43.9
+    },
+    "Yeshwanthpur Circle": {
+      "avg_volume": 19277.1,
+      "avg_congestion": 63.7,
+      "avg_speed": 43.0
+    }
+  },
+  "feature_cols": [
+    "Area Name_enc",
+    "Road/Intersection Name_enc",
+    "Weather Conditions_enc",
+    "roadwork_enc",
+    "day_of_week",
+    "month",
+    "Incident Reports"
+  ]
+}

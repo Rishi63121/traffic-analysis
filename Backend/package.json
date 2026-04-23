@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@vitejs/plugin-react-oxc": "^0.4.3"
+  }
+}
