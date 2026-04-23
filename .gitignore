@@ -1,19 +1,14 @@
-# Python
-venv/
-__pycache__/
-*.pyc
+# ML models
+*.pkl
 
-# Node
+# datasets
+*.csv
+
+# node modules
 node_modules/
 
-# Env files
+# python cache
+__pycache__/
+
+# env
 .env
-
-# ML models (optional but recommended)
-*.pkl
-*.pt
-*.h5
-
-# OS junk
-.DS_Store
-Thumbs.db
